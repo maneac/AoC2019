@@ -17,7 +17,7 @@ type moons []moon
 
 func main() {
 	var err error
-	f, err := os.Open("./t1.txt")
+	f, err := os.Open("./input.txt")
 	if err != nil {
 		panic(err)
 	}
@@ -48,6 +48,9 @@ func main() {
 		tmpMoon.z = z
 		moonArr = append(moonArr, tmpMoon)
 	}
+
+	day2(moonArr)
+	return
 
 	visited := map[string]struct{}{}
 	for {
