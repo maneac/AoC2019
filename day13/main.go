@@ -108,6 +108,10 @@ func printGrid(grid *[][]int) {
 	cmd := exec.Command("clear")
 	cmd.Stdout = os.Stdout
 	cmd.Run()
+<<<<<<< HEAD
+=======
+	time.Sleep(10 * time.Millisecond)
+>>>>>>> 42c847077f28edd9f28bf86c719308cac42e2071
 	fmt.Println("")
 	for i := range *grid {
 		for j := range (*grid)[i] {
@@ -164,7 +168,11 @@ func (byteInput *input) runProgram(loc int, ioChans *[]chan int, wg *sync.WaitGr
 				fmt.Printf("Waiting for input at %d\n", loc)
 			}
 			printGrid(grid)
+<<<<<<< HEAD
 			time.Sleep(time.Second / 30)
+=======
+			time.Sleep(40 * time.Millisecond)
+>>>>>>> 42c847077f28edd9f28bf86c719308cac42e2071
 			switch {
 			case ballLoc.x > paddleLoc.x:
 				(*ioChans)[loc] <- 1
